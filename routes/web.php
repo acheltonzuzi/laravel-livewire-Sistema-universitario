@@ -51,7 +51,7 @@ Route::middleware([
     Route::get("temas/",TemasCrud::class);
     Route::get("verTemas/",VerTemas::class);
     Route::get("verMonografia/",VerMonografias::class);
-    Route::get("verActividades/",VerActividades::class);
+    Route::get("verActividades/",VerActividades::class)->name("actividades");
 });
 Route::get("crud/",UserCrud::class);
 Route::get("download/{id}",[PrincipalController::class,"download"])->name("download");
